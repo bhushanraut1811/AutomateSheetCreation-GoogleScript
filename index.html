@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <script>
+    function formSubmit(){
+    console.log("inside func", "inside");
+    google.script.run
+    .withSuccessHandler(function(response){
+    alert("Folder & Files Created.");
+    }).
+    withFailureHandler(function(err){
+     alert("Something went wrong.");
+    })
+    .automateCodeReview(document.forms[0]);
+    console.log("inside func", "called");
+    }
+    </script> 
+      <div align="center">
+          <h3>Automate Folder and File Creation</h3>
+        <h3>Enter Details</h3>
+      <form>
+        <p><input type="text" name="storyId" value="" placeholder="Story or Defect ID"/></p>
+        <p><input type="text" name="folderId" value="" placeholder="Folder ID"/></p>
+        <p><input type="button" name="submit" value="submit" onClick = "formSubmit()"/></p>
+      </form>
+    </div> 
+  </body>
+</html>
